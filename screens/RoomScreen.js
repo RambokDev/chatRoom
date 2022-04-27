@@ -11,7 +11,7 @@ export default function RoomScreen({route}) {
 
 
     const rooms =  useSelector(state => state.room.rooms)
-    console.log(rooms)
+    // console.log(rooms)
 
     const roomId = route.params.roomId
     // console.log(roomId)
@@ -25,7 +25,7 @@ export default function RoomScreen({route}) {
 
 
     // // const messages = useState([room.messages]);
-    console.log("message: " , messages);
+    // console.log("message: " , messages);
 
 
     // const [messages, setMessages] = useState(messages2);

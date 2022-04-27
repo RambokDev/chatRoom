@@ -24,7 +24,10 @@ export const fetchRooms = (id) => {
 
         );
 
-        const responseJSON = await response.json();
+        const responseJSON = await response.json({
+            limit : '50mb'
+        });
+
 
         // console.log(responseJSON);
         const loadedRooms = [];
@@ -72,8 +75,10 @@ export const fetchRoomsMessages = async (id_room) => {
         );
 
 
-        const responseJSON = await response.json();
-        console.log(responseJSON)
+        const responseJSON = await response.json({
+            limit : '50mb'
+        });
+        // console.log(responseJSON)
 
         // console.log(responseJSON);
         const loadedRoomsMessages = [];
@@ -107,12 +112,12 @@ export const fetchRoomsMessages = async (id_room) => {
  */
 export const insertMessage = async (newMessage, room) => {
 
-    console.log( "Message : " , newMessage);
+    // console.log( "Message : " , newMessage);
     const message = newMessage[0].text;
     const user = newMessage[0].user._id;
-    console.log("room : ", room);
-    console.log("Message : ", message)
-    console.log("User : " , user)
+    // console.log("room : ", room);
+    // console.log("Message : ", message)
+    // console.log("User : " , user)
 
 
 
@@ -135,8 +140,10 @@ export const insertMessage = async (newMessage, room) => {
             }
         )
 
-        const responseJSON = await response.json()
-        console.log(responseJSON)
+        const responseJSON = await response.json({
+            limit : '50mb'
+        });
+        // console.log(responseJSON)
 
         //dispatch({type: CREATE_PRODUCT, product: loadedProducts})
     // }
